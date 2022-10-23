@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天室</title>
+    <style>
+        .content {
+            height: 500px;
+            width: 750px;
+            background: #ccc;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 600px;
+        }
+
+        .list-group {
+            grid-row: 1/-1;
+            grid-column: 1/2;
+        }
+
+        .list-text {
+            grid-column: 2/-1;
+            grid-row: 1/3;
+        }
+
+        .sendTextBox {
+            grid-row: 3/-1;
+            grid-column: 2/-1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: end;
+        }
+
+        button {
+            width: 50px;
+            height: 25px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+
+        .list-group,
+        .list-text,
+        .sendTextBox {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="list-group"></div>
+        <div class="list-text"></div>
+        <div class="sendTextBox">
+            <button class="close">取消</button>
+            <button class="send">发送</button>
+        </div>
+    </div>
+</body>
+
+</html>
